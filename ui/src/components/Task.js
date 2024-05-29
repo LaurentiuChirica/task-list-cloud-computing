@@ -19,7 +19,7 @@ export default function Task ({task, fetchTasks}) {
         id, name, completed: !isComplete
       })      
       setIsComplete((prev) => !prev)
-    } catch (error) {
+    } catch (err) {
       console.log(err);
     }
   }
@@ -28,7 +28,7 @@ export default function Task ({task, fetchTasks}) {
     try {
       await axios.delete(`${API_URL}/${task.id}`) 
       await fetchTasks();
-    } catch (error) {
+    } catch (err) {
       console.log(err);
     }
   }

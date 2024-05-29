@@ -17,7 +17,7 @@ export default function AddTaskForm({fetchTasks}) {
 
       await fetchTasks();
       setNewTask("");
-    } catch (error) {
+    } catch (err) {
       console.log(err);
     }
   }

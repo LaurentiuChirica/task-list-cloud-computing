@@ -23,7 +23,7 @@ export default function UpdateTaskForm ({
 
       await fetchTasks();
       setTaskName("");
-    } catch (error) {
+    } catch (err) {
       console.log(err);
     }
   }
